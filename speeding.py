@@ -41,6 +41,7 @@ def main():
             diffobj = time2obj - time1obj # Minus the later time from the earlier time to get difference or time taken to travel between them
             diff_hours = float(diffobj.seconds)/float(3600)
             avg_speed = DIST_1/diff_hours # calculates average speed of number plate between checkpoints 1 & 2
+            avg_speed = round(avg_speed, 1)
             if avg_speed > SPEED_LIMIT:
                 speeding_str = highway_times['2'] + " 2 " + plate + " " + str(avg_speed) # Create a string with appropriate information if car is speeding
                 speeding.append(speeding_str) # add the above string to a list of speeding cars
@@ -50,6 +51,7 @@ def main():
             diffobj = time2obj - time1obj
             diff_hours = float(diffobj.seconds)/float(3600)
             avg_speed = DIST_2/diff_hours
+            avg_speed = round(avg_speed, 1)
             if avg_speed > SPEED_LIMIT:
                 speeding_str = highway_times['3'] + " 3 " + plate + " " + str(avg_speed)
                 speeding.append(speeding_str)
