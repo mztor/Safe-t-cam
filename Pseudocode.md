@@ -1,12 +1,11 @@
 <!DOCTYPE Pseudocode>
 
 BEGIN AQUIREINFORMATION
+  import textfile #this should be done first before your previous 3 lines right?
   Get distance1
   Get distance 2
   Get SPEED_LIMIT
-  import textfile #this should be done first before your previous 3 lines right?
-  Get number of lines in textfile -1
-  Counter = number or lines in textfile -1
+
 END
 
 BEGIN NUMBERPLATES
